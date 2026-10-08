@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.venv/
+# GeoPDFs go to Releases, not into git
+*.pdf

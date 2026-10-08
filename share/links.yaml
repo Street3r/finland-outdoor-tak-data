@@ -1,0 +1,66 @@
+# Shared links. tools/make_qr.py turns these into QR codes (share/qr/) and SHARE.md.
+#
+#   id:     file name of the QR code
+#   group:  heading in SHARE.md
+#   title:  shown in SHARE.md
+#   path:   relative to base_url (or `url:` for a full URL)
+#   kind:   import -> tak://com.atakmap.app/import?url=... (ATAK opens the file)
+#           url    -> plain link (browser, iTAK, WinTAK)
+#   note:   optional short text
+base_url: https://street3r.github.io/finland-outdoor-tak-data/
+
+links:
+  - id: iconset
+    group: Start here
+    title: Icon set (install once)
+    path: iconset/lipas2tak_iconset.zip
+    kind: import
+
+  - id: all_en
+    group: KML network links
+    title: All areas (English)
+    path: links/all_en.kml
+    kind: import
+    note: Or add manually - Import → KML Link, auto refresh 86400 s.
+  - id: all_fi
+    group: KML network links
+    title: Kaikki alueet (suomi)
+    path: links/all_fi.kml
+    kind: import
+  - id: kansallispuistot_en
+    group: KML network links
+    title: National parks (English)
+    path: links/kansallispuistot_en.kml
+    kind: import
+  - id: kansallispuistot_fi
+    group: KML network links
+    title: Kansallispuistot (suomi)
+    path: links/kansallispuistot_fi.kml
+    kind: import
+  - id: maakunnat_en
+    group: KML network links
+    title: Regions (English)
+    path: links/maakunnat_en.kml
+    kind: import
+  - id: maakunnat_fi
+    group: KML network links
+    title: Maakunnat (suomi)
+    path: links/maakunnat_fi.kml
+    kind: import
+
+  - id: nuuksio_en_datapackage
+    group: Data packages
+    title: Nuuksio National Park (English)
+    path: en/kansallispuistot/nuuksio/nuuksio_en.zip
+    kind: import
+  - id: nuuksio_fi_datapackage
+    group: Data packages
+    title: Nuuksion kansallispuisto (suomi)
+    path: fi/kansallispuistot/nuuksio/nuuksio_fi.zip
+    kind: import
+
+  - id: catalogue
+    group: Catalogue
+    title: All files (web page)
+    path: ""
+    kind: url

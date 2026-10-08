@@ -1,0 +1,26 @@
+# Map catalogue. One entry per published map.
+# Fields:
+#   id:        unique id, e.g. nuuksio-25k-2026-10
+#   area:      area key as in the generated data, e.g. kansallispuistot/nuuksio
+#   name:      {en: ..., fi: ...}
+#   scale:     e.g. 1:25000
+#   edition:   YYYY-MM
+#   geopdf:    release asset URL
+#   overlay:   path to the overlay KMZ in this repo (optional)
+#   sources:   list of {name, licence, attribution}
+#   licence:   licence of the map as a whole
+maps: []
+
+# Example:
+# - id: nuuksio-25k-2026-10
+#   area: kansallispuistot/nuuksio
+#   name: {en: Nuuksio National Park, fi: Nuuksion kansallispuisto}
+#   scale: "1:25000"
+#   edition: 2026-10
+#   geopdf: https://github.com/Street3r/finland-outdoor-tak-data/releases/download/maps-2026.10/nuuksio_25k_2026-10.pdf
+#   overlay: maps/kansallispuistot/nuuksio/nuuksio_overlay.kmz
+#   sources:
+#     - name: National Land Survey of Finland, Topographic Database
+#       licence: CC BY 4.0
+#       attribution: Contains data from the National Land Survey of Finland Topographic Database 10/2026
+#   licence: CC BY 4.0

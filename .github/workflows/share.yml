@@ -1,0 +1,30 @@
+name: QR codes
+
+on:
+  push:
+    branches: [main]
+    paths: [share/links.yaml, tools/make_qr.py]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  qr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install segno==1.6.1 pyyaml
+      - run: python tools/make_qr.py
+      - name: Commit changes
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add SHARE.md share/qr
+            git commit -m "Update QR codes"
+            git push
+          fi
