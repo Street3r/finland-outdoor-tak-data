@@ -1,6 +1,6 @@
 # ATAK quick start
 
-> **Suomeksi lyhyesti:** asenna kuvakesarja kerran, lisää KML-linkki (Import → KML Link) tai tuo alueen datapaketti. QR-koodit löytyvät tiedostosta [SHARE.md](../SHARE.md).
+> **Suomeksi lyhyesti:** asenna kuvakesarja kerran, lisää KML-linkki (Import → KML Link) tai tuo alueen datapaketti. QR-koodit: [jakosivu](https://street3r.github.io/finland-outdoor-tak-data/share/fi/) ja [SHARE.fi.md](../SHARE.fi.md).
 
 Base URL: `https://street3r.github.io/finland-outdoor-tak-data/`
 
@@ -34,7 +34,7 @@ Filter with hashtags in the search: `#laavu`, `#nuotiopaikka`, `#nuuksio`, `#uus
 
 ### QR codes and links
 
-`tak://com.atakmap.app/import?url=<url>` opens a file directly in ATAK (ATAK asks for confirmation). [SHARE.md](../SHARE.md) has a QR code for each file. iTAK and WinTAK: use the plain https link.
+`tak://com.atakmap.app/import?url=<url>` opens a file directly in ATAK (ATAK asks for confirmation). The [share pages](https://street3r.github.io/finland-outdoor-tak-data/share/en/) have a QR code and an "open in ATAK" button for every area, one page per category and language; [SHARE.md](../SHARE.md) has the start links. iTAK and WinTAK: use the plain https link.
 
 ## WinTAK and Google Earth
 

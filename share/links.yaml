@@ -1,66 +1,58 @@
-# Shared links. tools/make_qr.py turns these into QR codes (share/qr/) and SHARE.md.
+# Shared links. tools/make_qr.py turns these into QR codes (share/qr/)
+# and the pages SHARE.md (English) and SHARE.fi.md (Finnish).
 #
 #   id:     file name of the QR code
-#   group:  heading in SHARE.md
-#   title:  shown in SHARE.md
+#   lang:   en | fi | all  (which page lists it)
+#   group:  heading on the page
+#   title:  shown on the page
 #   path:   relative to base_url (or `url:` for a full URL)
 #   kind:   import -> tak://com.atakmap.app/import?url=... (ATAK opens the file)
 #           url    -> plain link (browser, iTAK, WinTAK)
 #   note:   optional short text
+#
+# Per-area QR codes are on the generated share pages (share/<lang>/ on GitHub Pages).
 base_url: https://street3r.github.io/finland-outdoor-tak-data/
 
 links:
+  - id: share_en
+    lang: en
+    group: Start here
+    title: Share page with all QR codes
+    path: share/en/index.html
+    kind: url
+    note: National parks and regions, one QR code per area.
+  - id: share_fi
+    lang: fi
+    group: Aloita tästä
+    title: Jakosivu, kaikki QR-koodit
+    path: share/fi/index.html
+    kind: url
+    note: Kansallispuistot ja maakunnat, QR-koodi jokaiselle alueelle.
+
   - id: iconset
+    lang: en
     group: Start here
     title: Icon set (install once)
     path: iconset/lipas2tak_iconset.zip
     kind: import
+  - id: iconset
+    lang: fi
+    group: Aloita tästä
+    title: Kuvakesarja (asennetaan kerran)
+    path: iconset/lipas2tak_iconset.zip
+    kind: import
 
   - id: all_en
-    group: KML network links
-    title: All areas (English)
+    lang: en
+    group: All areas
+    title: All areas as auto-refreshing layers (KML network link)
     path: links/all_en.kml
     kind: import
-    note: Or add manually - Import → KML Link, auto refresh 86400 s.
+    note: Or add by hand - Import → KML Link, auto refresh 86400 s.
   - id: all_fi
-    group: KML network links
-    title: Kaikki alueet (suomi)
+    lang: fi
+    group: Kaikki alueet
+    title: Kaikki alueet päivittyvinä tasoina (KML-verkkolinkki)
     path: links/all_fi.kml
     kind: import
-  - id: kansallispuistot_en
-    group: KML network links
-    title: National parks (English)
-    path: links/kansallispuistot_en.kml
-    kind: import
-  - id: kansallispuistot_fi
-    group: KML network links
-    title: Kansallispuistot (suomi)
-    path: links/kansallispuistot_fi.kml
-    kind: import
-  - id: maakunnat_en
-    group: KML network links
-    title: Regions (English)
-    path: links/maakunnat_en.kml
-    kind: import
-  - id: maakunnat_fi
-    group: KML network links
-    title: Maakunnat (suomi)
-    path: links/maakunnat_fi.kml
-    kind: import
-
-  - id: nuuksio_en_datapackage
-    group: Data packages
-    title: Nuuksio National Park (English)
-    path: en/kansallispuistot/nuuksio/nuuksio_en.zip
-    kind: import
-  - id: nuuksio_fi_datapackage
-    group: Data packages
-    title: Nuuksion kansallispuisto (suomi)
-    path: fi/kansallispuistot/nuuksio/nuuksio_fi.zip
-    kind: import
-
-  - id: catalogue
-    group: Catalogue
-    title: All files (web page)
-    path: ""
-    kind: url
+    note: Tai käsin - Import → KML Link, automaattinen päivitys 86400 s.

@@ -12,7 +12,7 @@ Write access: a deploy key with write access, used only for the `data` branch. P
 
 ## GitHub Pages
 
-Settings → Pages → Deploy from a branch → `data` / root. Base URL: `https://street3r.github.io/finland-outdoor-tak-data/`.
+Settings → Pages → Deploy from a branch → `data` / root. On a free GitHub plan Pages requires a public repository. Base URL: `https://street3r.github.io/finland-outdoor-tak-data/`.
 
 The base URL is written into the KML network links and QR codes. Changing it later (e.g. to a custom domain) means users have to re-add their links, so decide before sharing widely.
 
@@ -22,6 +22,8 @@ See [maps/README.md](../maps/README.md).
 
 ## QR codes
 
+Per-area QR codes and share pages (`share/<lang>/`) are generated with the data. The start links on `main` are maintained here:
+
 1. Add or edit an entry in [share/links.yaml](../share/links.yaml).
 2. Run `python tools/make_qr.py` (needs `pip install segno pyyaml`), or let the workflow do it on push.
-3. QR codes are written to `share/qr/` and listed in [SHARE.md](../SHARE.md).
+3. QR codes are written to `share/qr/` and listed in [SHARE.md](../SHARE.md) and [SHARE.fi.md](../SHARE.fi.md).
