@@ -28,7 +28,10 @@ A single area works the same way with its `.kmz` URL, e.g. `…/en/kansallispuis
 
 ### Data package
 
-Import `…/<lang>/<category>/<area>/<area>_<lang>.zip` via Import Manager, a QR code, or TAK Server. Importing a newer version replaces the previous one.
+Import `…/<lang>/<category>/<area>/<area>_<lang>.zip` via Import Manager, a QR code, or TAK Server. The package name ends with the date of its latest change, e.g. `Nuuksion kansallispuisto (fi) 2026-10-21`.
+
+- A new version has a new package UID, so ATAK imports it and updates the existing markers and routes (no duplicates). Importing the same version again is skipped.
+- Sites removed from the data stay on the device until you delete the old package: in Data Packages, delete the old version together with its contents, then import the new one.
 
 Filter with hashtags in the search: `#laavu`, `#nuotiopaikka`, `#nuuksio`, `#uusimaa` …
 
