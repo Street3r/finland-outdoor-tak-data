@@ -5,7 +5,7 @@
 - Written by the publisher in [docker-lipas-integration](https://github.com/Street3r/docker-lipas-integration) after each weekly run (`PUBLISH_GITHUB=true`).
 - The publisher builds a separate public version with the project's own icon set and the GitHub Pages base URL.
 - The branch is **replaced on every update** (single commit, force-push), so it only holds the latest version. `CHANGELOG.md` on the branch keeps a short history of changes.
-- Nothing is pushed if no file changed.
+- When no data changed, only the check time (`status.json`, index files) is updated; the changelog gets no new entry.
 - Do not edit the `data` branch by hand.
 
 Write access: a deploy key with write access, used only for the `data` branch. Protect `main` with a ruleset so the key cannot change it.
