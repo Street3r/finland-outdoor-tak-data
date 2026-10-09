@@ -10,6 +10,10 @@
 
 Write access: a deploy key with write access, used only for the `data` branch. Protect `main` with a ruleset so the key cannot change it.
 
+## Monitoring
+
+The *Stale data check* workflow runs daily. If `status.json` on the `data` branch is more than 10 days old, it opens an issue (GitHub e-mails the owner) with the commands to check on the server, and closes it when updates resume. Dependabot keeps the workflow actions up to date.
+
 ## GitHub Pages
 
 Settings → Pages → Deploy from a branch → `data` / root. On a free GitHub plan Pages requires a public repository. Base URL: `https://street3r.github.io/finland-outdoor-tak-data/`.

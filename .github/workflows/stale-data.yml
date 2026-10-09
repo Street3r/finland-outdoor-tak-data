@@ -1,0 +1,55 @@
+name: Stale data check
+
+# Opens an issue (which notifies the repository owner by e-mail) when the
+# generated data has not been checked for too long, e.g. because the server
+# or the publisher is down. Closes the issue again once updates resume.
+
+on:
+  schedule:
+    - cron: "17 6 * * *"   # daily 06:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+env:
+  MAX_AGE_DAYS: "10"
+  TITLE: "Generated data is out of date"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: data
+          sparse-checkout: status.json
+          sparse-checkout-cone-mode: false
+      - name: Check status.json age
+        id: age
+        run: |
+          if [ ! -f status.json ]; then echo "days=999" >> "$GITHUB_OUTPUT"; echo "checked=never" >> "$GITHUB_OUTPUT"; exit 0; fi
+          checked=$(python3 -c "import json;print(json.load(open('status.json'))['checked'])")
+          days=$(python3 -c "import datetime as d;c=d.datetime.fromisoformat('$checked');print((d.datetime.now(d.timezone.utc)-c).days)")
+          echo "checked=$checked" >> "$GITHUB_OUTPUT"
+          echo "days=$days" >> "$GITHUB_OUTPUT"
+          echo "Last check $checked ($days days ago)"
+      - name: Open or close the issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DAYS: ${{ steps.age.outputs.days }}
+          CHECKED: ${{ steps.age.outputs.checked }}
+        run: |
+          open=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --search "\"$TITLE\" in:title" --json number --jq '.[0].number // empty')
+          if [ "$DAYS" -gt "$MAX_AGE_DAYS" ]; then
+            if [ -z "$open" ]; then
+              gh issue create --repo "$GITHUB_REPOSITORY" --title "$TITLE" --body "The data was last checked **$CHECKED** ($DAYS days ago; limit $MAX_AGE_DAYS days).
+
+          Check on the server: \`docker compose ps\`, \`docker compose logs --tail 50 generator\` and \`docker compose logs --tail 50 publisher\`.
+
+          This issue closes automatically when updates resume."
+            fi
+          elif [ -n "$open" ]; then
+            gh issue close "$open" --repo "$GITHUB_REPOSITORY" --comment "Data checked $CHECKED again; closing."
+          fi
