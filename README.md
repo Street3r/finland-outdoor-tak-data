@@ -38,6 +38,6 @@ The data is generated from [Lipas](https://lipas.fi) and [OpenStreetMap](https:/
 
 ## Licence
 
-Generated data: [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/) — *Lipas – University of Jyväskylä (CC BY 4.0); © OpenStreetMap contributors (ODbL 1.0); Statistics Finland (CC BY 4.0)*. Maps, docs and tools have their own terms: see [LICENSE.md](LICENSE.md).
+Generated data: [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/) — *Lipas – University of Jyväskylä (CC BY 4.0); © OpenStreetMap contributors (ODbL 1.0); Statistics Finland (CC BY 4.0)*. Maps, docs and tools have their own terms: see [LICENSING.md](LICENSING.md).
 
 The data is provided as is. Always check current information from the site operator before relying on it in the field.

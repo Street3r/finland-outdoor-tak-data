@@ -1,10 +1,10 @@
 # Licences
 
-Different parts of this repository are licensed differently.
+Different parts of this repository are licensed differently. The main licence of the repository, for the generated data, is the ODbL 1.0 in [LICENSE](LICENSE).
 
 | Part | Licence |
 |---|---|
-| Generated data (`data` branch: KML, KMZ, data packages, GPX, index files) | [Open Database License (ODbL) 1.0](https://opendatacommons.org/licenses/odbl/1-0/) |
+| Generated data (`data` branch: KML, KMZ, data packages, GPX, index files) | [Open Database License (ODbL) 1.0](LICENSE) |
 | Icon set (`iconset/`) | MIT, see [python-lipas2tak-tool](https://github.com/Street3r/python-lipas2tak-tool/blob/main/LICENSE) |
 | Maps (`maps/`, GeoPDF releases) | per map, listed in [maps/catalog.yaml](maps/catalog.yaml) and the map's `SOURCES.md` |
 | Documentation (`README.md`, `docs/`, `SHARE.md`) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
