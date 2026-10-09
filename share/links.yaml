@@ -47,12 +47,12 @@ links:
     group: All areas
     title: All areas as auto-refreshing layers (KML network link)
     path: links/all_en.kml
-    kind: import
-    note: Or add by hand - Import → KML Link, auto refresh 86400 s.
+    kind: url
+    note: Copy the URL, then in ATAK - Import → KML Link, paste it, Auto Refresh 86400 s. (Opening it via QR import only makes a one-off copy.)
   - id: all_fi
     lang: fi
     group: Kaikki alueet
     title: Kaikki alueet päivittyvinä tasoina (KML-verkkolinkki)
     path: links/all_fi.kml
-    kind: import
-    note: Tai käsin - Import → KML Link, automaattinen päivitys 86400 s.
+    kind: url
+    note: Kopioi osoite ja lisää ATAKissa - Import → KML Link, liitä osoite, Auto Refresh 86400 s. (QR-tuonti tekisi vain kertakopion.)

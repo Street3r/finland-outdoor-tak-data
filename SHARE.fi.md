@@ -17,4 +17,4 @@ Skannaa QR-koodi puhelimen kameralla ja avaa ATAKilla; ATAK kysyy ennen tuontia.
 
 | QR | |
 |---|---|
-| <img src="share/qr/all_fi.svg" width="150" alt="QR: Kaikki alueet päivittyvinä tasoina (KML-verkkolinkki)"> | **Kaikki alueet päivittyvinä tasoina (KML-verkkolinkki)**<br>Skannaa puhelimen kameralla, avaa ATAKilla<br>Tai käsin - Import → KML Link, automaattinen päivitys 86400 s.<br>[https://street3r.github.io/finland-outdoor-tak-data/links/all_fi.kml](https://street3r.github.io/finland-outdoor-tak-data/links/all_fi.kml)<br><sub><code>tak://com.atakmap.app/import?url=https%3A%2F%2Fstreet3r.github.io%2Ffinland-outdoor-tak-data%2Flinks%2Fall_fi.kml</code></sub> |
+| <img src="share/qr/all_fi.svg" width="150" alt="QR: Kaikki alueet päivittyvinä tasoina (KML-verkkolinkki)"> | **Kaikki alueet päivittyvinä tasoina (KML-verkkolinkki)**<br>Avautuu selaimessa<br>Kopioi osoite ja lisää ATAKissa - Import → KML Link, liitä osoite, Auto Refresh 86400 s. (QR-tuonti tekisi vain kertakopion.)<br>[https://street3r.github.io/finland-outdoor-tak-data/links/all_fi.kml](https://street3r.github.io/finland-outdoor-tak-data/links/all_fi.kml) |

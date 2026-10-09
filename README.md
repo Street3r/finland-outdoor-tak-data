@@ -21,7 +21,7 @@ Finnish and English versions are separate files (`fi` / `en`).
 ## Quick start (ATAK)
 
 1. Install the icon set once: scan its QR code in [SHARE.md](SHARE.md) ([suomeksi](SHARE.fi.md)), or import `iconset/lipas2tak_iconset.zip`.
-2. **Import → KML Link**, paste `https://street3r.github.io/finland-outdoor-tak-data/links/all_en.kml`, turn on auto refresh (86400 s).
+2. **Import → KML Link**, paste `https://street3r.github.io/finland-outdoor-tak-data/links/all_en.kml`, turn on auto refresh (86400 s). The link has to be added by hand; a QR import would only make a one-off copy.
 3. Switch areas on and off in Overlay Manager → Network Resources.
 
 For navigable routes and #hashtag filtering, use the per-area **data packages** instead of KML. Details: [docs/atak-quick-start.md](docs/atak-quick-start.md) · QR codes for every area: [share page](https://street3r.github.io/finland-outdoor-tak-data/share/en/) ([suomeksi](https://street3r.github.io/finland-outdoor-tak-data/share/fi/)).

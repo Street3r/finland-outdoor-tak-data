@@ -1,6 +1,6 @@
 # ATAK quick start
 
-> **Suomeksi lyhyesti:** asenna kuvakesarja kerran, lisää KML-linkki (Import → KML Link) tai tuo alueen datapaketti. QR-koodit: [jakosivu](https://street3r.github.io/finland-outdoor-tak-data/share/fi/) ja [SHARE.fi.md](../SHARE.fi.md).
+> **Suomeksi lyhyesti:** asenna kuvakesarja kerran, lisää KML-linkki käsin (Import → KML Link, kopioi osoite jakosivulta) tai tuo alueen datapaketti. QR-koodit: [jakosivu](https://street3r.github.io/finland-outdoor-tak-data/share/fi/) ja [SHARE.fi.md](../SHARE.fi.md).
 
 Base URL: `https://street3r.github.io/finland-outdoor-tak-data/`
 
@@ -19,6 +19,8 @@ Import `iconset/lipas2tak_iconset.zip` (Import Manager, or scan the QR code in [
 
 ### KML network link
 
+A refreshing link can only be added by hand: opening the `.kml` through a QR code or an "open in ATAK" link imports a one-off copy. The share pages have a copy button for each URL.
+
 1. Import → **KML Link**.
 2. Name: e.g. `Finland outdoors`. URL: `…/links/all_en.kml` (or `all_fi.kml`, `kansallispuistot_en.kml`, `maakunnat_en.kml`).
 3. Auto refresh on, interval `86400` (the data changes weekly).
@@ -30,7 +32,8 @@ A single area works the same way with its `.kmz` URL, e.g. `…/en/kansallispuis
 
 Import `…/<lang>/<category>/<area>/<area>_<lang>.zip` via Import Manager, a QR code, or TAK Server. The package name ends with the date of its latest change, e.g. `Nuuksion kansallispuisto (fi) 2026-10-21`.
 
-- A new version has a new package UID, so ATAK imports it and updates the existing markers and routes (no duplicates). Importing the same version again is skipped.
+- The package stays in **Data Packages**, so its contents can be hidden or removed together.
+- A new version has a new package UID, so ATAK imports it and updates the existing markers and routes (no duplicates). Importing the same version again is skipped. Finnish and English packages of an area share the same items: importing the other language switches the texts.
 - Sites removed from the data stay on the device until you delete the old package: in Data Packages, delete the old version together with its contents, then import the new one.
 
 Filter with hashtags in the search: `#laavu`, `#nuotiopaikka`, `#nuuksio`, `#uusimaa` …
@@ -46,4 +49,5 @@ Open the `.kml` file (network link) or the `.kmz`.
 ## Known limitations
 
 - Many Metsähallitus sites and main trails are missing from Lipas; OpenStreetMap fills some gaps.
-- To be confirmed in testing: whether importing a network link `.kml` via QR creates refreshing links, and whether ATAK fetches areas that are switched off.
+- Network links have to be added by hand (Import → KML Link); a QR import creates a one-off copy.
+- To be confirmed: whether ATAK fetches areas that are switched off.
