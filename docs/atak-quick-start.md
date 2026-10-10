@@ -17,6 +17,8 @@ Import `iconset/lipas2tak_iconset.zip` (Import Manager, or scan the QR code in [
 | **GPX** (`_gpx.zip`) | routes only | converted to ATAK routes on import | – | re-import |
 | **GeoPDF** | offline base map | – | – | per map edition |
 
+Named routes are navigable ATAK routes; a loop route has one start point ("lähtö ja paluu" / "start and finish"). Unnamed path networks (many connected paths without route names, e.g. Isojärvi) are drawn lines named "<site> · 4.6 km", with the network's total length in the remarks. Long routes are split at region borders, so each region package has its own section.
+
 ### KML network link
 
 A refreshing link can only be added by hand: opening the `.kml` through a QR code or an "open in ATAK" link imports a one-off copy. The share pages have a copy button for each URL.
@@ -24,7 +26,7 @@ A refreshing link can only be added by hand: opening the `.kml` through a QR cod
 1. Import → **KML Link**.
 2. Name: e.g. `Finland outdoors`. URL: `…/links/all_en.kml` (or `all_fi.kml`, `kansallispuistot_en.kml`, `maakunnat_en.kml`).
 3. Auto refresh on, interval `86400` (the data changes weekly).
-4. Overlay Manager → **Network Resources**: download, then switch areas on and off. National parks are on by default, regions off.
+4. Overlay Manager → **Network Resources**: download, then switch areas on and off. National parks are on by default, regions off (they contain the parks too, so switching both on shows park features twice). Each region must be switched on separately.
 
 A single area works the same way with its `.kmz` URL, e.g. `…/en/kansallispuistot/nuuksio/nuuksio_en.kmz`.
 
