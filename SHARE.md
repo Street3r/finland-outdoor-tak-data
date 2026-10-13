@@ -17,4 +17,4 @@ Scan a QR code with the phone camera and open it with ATAK; ATAK asks before imp
 
 | QR | |
 |---|---|
-| <img src="share/qr/all_en.svg" width="150" alt="QR: All areas as auto-refreshing layers (KML network link)"> | **All areas as auto-refreshing layers (KML network link)**<br>Opens in a browser<br>Copy the URL, then in ATAK - Import → KML Link, paste it, Auto Refresh 86400 s. (Opening it via QR import only makes a one-off copy.)<br>[https://street3r.github.io/finland-outdoor-tak-data/links/all_en.kml](https://street3r.github.io/finland-outdoor-tak-data/links/all_en.kml) |
+| <img src="share/qr/all_en.svg" width="150" alt="QR: All areas as auto-refreshing layers"> | **All areas as auto-refreshing layers**<br>Scan with the phone camera, open with ATAK<br>ATAK adds a refreshing link (Overlay Manager → Network Resources). By hand or in other apps use links/all_en.kml.<br>[https://street3r.github.io/finland-outdoor-tak-data/links/all_en_link.zip](https://street3r.github.io/finland-outdoor-tak-data/links/all_en_link.zip)<br><sub><code>tak://com.atakmap.app/import?url=https%3A%2F%2Fstreet3r.github.io%2Ffinland-outdoor-tak-data%2Flinks%2Fall_en_link.zip</code></sub> |

@@ -45,14 +45,14 @@ links:
   - id: all_en
     lang: en
     group: All areas
-    title: All areas as auto-refreshing layers (KML network link)
-    path: links/all_en.kml
-    kind: url
-    note: Copy the URL, then in ATAK - Import → KML Link, paste it, Auto Refresh 86400 s. (Opening it via QR import only makes a one-off copy.)
+    title: All areas as auto-refreshing layers
+    path: links/all_en_link.zip
+    kind: import
+    note: ATAK adds a refreshing link (Overlay Manager → Network Resources). By hand or in other apps use links/all_en.kml.
   - id: all_fi
     lang: fi
     group: Kaikki alueet
-    title: Kaikki alueet päivittyvinä tasoina (KML-verkkolinkki)
-    path: links/all_fi.kml
-    kind: url
-    note: Kopioi osoite ja lisää ATAKissa - Import → KML Link, liitä osoite, Auto Refresh 86400 s. (QR-tuonti tekisi vain kertakopion.)
+    title: Kaikki alueet päivittyvinä tasoina
+    path: links/all_fi_link.zip
+    kind: import
+    note: ATAK lisää päivittyvän linkin (Overlay Manager → Network Resources). Käsin tai muissa sovelluksissa links/all_fi.kml.

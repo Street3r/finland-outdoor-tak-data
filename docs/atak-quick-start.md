@@ -1,6 +1,6 @@
 # ATAK quick start
 
-> **Suomeksi lyhyesti:** asenna kuvakesarja kerran, lisää KML-linkki käsin (Import → KML Link, kopioi osoite jakosivulta) tai tuo alueen datapaketti. QR-koodit: [jakosivu](https://street3r.github.io/finland-outdoor-tak-data/share/fi/) ja [SHARE.fi.md](../SHARE.fi.md).
+> **Suomeksi lyhyesti:** asenna kuvakesarja kerran, lisää päivittyvä taso jakosivun QR-koodilla tai painikkeella tai tuo alueen datapaketti. QR-koodit: [jakosivu](https://street3r.github.io/finland-outdoor-tak-data/share/fi/) ja [SHARE.fi.md](../SHARE.fi.md).
 
 Base URL: `https://street3r.github.io/finland-outdoor-tak-data/`
 
@@ -21,7 +21,9 @@ Named routes are navigable ATAK routes; a loop route has one start point ("läht
 
 ### KML network link
 
-A refreshing link can only be added by hand: opening the `.kml` through a QR code or an "open in ATAK" link imports a one-off copy. The share pages have a copy button for each URL.
+Easiest: open the **auto-refreshing layer** QR code or button on the share page (the `_link.zip` package). ATAK adds the link to Overlay Manager → Network Resources and refreshes it daily. Opening the `.kml` file itself would only import a one-off copy.
+
+By hand (or in other apps):
 
 1. Import → **KML Link**.
 2. Name: e.g. `Finland outdoors`. URL: `…/links/all_en.kml` (or `all_fi.kml`, `kansallispuistot_en.kml`, `maakunnat_en.kml`).
@@ -51,5 +53,5 @@ Open the `.kml` file (network link) or the `.kmz`.
 ## Known limitations
 
 - Many Metsähallitus sites and main trails are missing from Lipas; OpenStreetMap fills some gaps.
-- Network links have to be added by hand (Import → KML Link); a QR import creates a one-off copy.
+- Refreshing layers come from the `_link.zip` packages; importing a `.kml`/`.kmz` file directly creates a one-off copy.
 - To be confirmed: whether ATAK fetches areas that are switched off.
