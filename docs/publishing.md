@@ -2,13 +2,13 @@
 
 ## Generated data (`data` branch)
 
-- Written by the publisher in [docker-lipas-integration](https://github.com/Street3r/docker-lipas-integration) after each weekly run (`PUBLISH_GITHUB=true`).
+- Written by the publisher in [docker-lipas-integration](https://github.com/Street3r/docker-lipas-integration) after each weekly run (enabled with `COMPOSE_PROFILES=github`).
 - The publisher builds a separate public version with the project's own icon set and the GitHub Pages base URL.
 - The branch is **replaced on every update** (single commit, force-push), so it only holds the latest version. `CHANGELOG.md` on the branch keeps a short history of changes.
 - When no data changed, only the check time (`status.json`, index files) is updated; the changelog gets no new entry.
 - Do not edit the `data` branch by hand.
 
-Write access: a deploy key with write access, used only for the `data` branch. Protect `main` with a ruleset so the key cannot change it.
+Write access: a deploy key with write access. The publisher only pushes to the `data` branch, but a deploy key's write access covers the whole repository. The `protect-main` ruleset (Restrict deletions, Block force pushes) keeps `main` from being deleted or overwritten; the key could still add ordinary commits to `main`, so keep it only on the publishing server.
 
 ## Monitoring
 

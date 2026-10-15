@@ -1,0 +1,38 @@
+name: Missing or wrong site
+description: A shelter, campfire site, route or other feature is missing, misplaced or has wrong details
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The data is generated weekly from [Lipas](https://lipas.fi) and [OpenStreetMap](https://www.openstreetmap.org). Fixes made at the source appear here after the next weekly run.
+
+        - **OpenStreetMap features** (remarks say "Source: OpenStreetMap"): anyone can fix them at openstreetmap.org.
+        - **Lipas features**: the site's maintainer (usually the municipality or Metsähallitus) updates Lipas; you can also send feedback via lipas.fi.
+
+        Open an issue here when the problem is in how this project processes the data, or if you are not sure where it comes from.
+  - type: input
+    id: area
+    attributes:
+      label: Area
+      description: National park or region, e.g. Nuuksio National Park
+    validations:
+      required: true
+  - type: input
+    id: feature
+    attributes:
+      label: Feature
+      description: Name or type of the site or route, and its coordinates if you know them
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong?
+      description: What you see in ATAK (or another app) and what it should be
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Data package or layer
+      description: e.g. data package "Nuuksion kansallispuisto (fi) 2026-10-21" or the all-areas layer
