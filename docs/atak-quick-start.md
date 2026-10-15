@@ -15,7 +15,7 @@ Import `iconset/lipas2tak_iconset.zip` (Import Manager, or scan the QR code in [
 | **KML network link** | overview, many areas | lines | no | automatic |
 | **Data package** (`.zip`) | navigation in one area | navigable ATAK routes with named waypoints | yes | re-import |
 | **GPX** (`_gpx.zip`) | routes only | converted to ATAK routes on import | – | re-import |
-| **GeoPDF** | offline base map | – | – | per map edition |
+| **GeoPDF** *(coming: awaiting publication permission)* | offline base map | – | – | per map edition |
 
 Named routes are navigable ATAK routes; a loop route has one start point ("lähtö ja paluu" / "start and finish"). Unnamed path networks (many connected paths without route names, e.g. Isojärvi) are drawn lines named "<site> · 4.6 km", with the network's total length in the remarks. Long routes are split at region borders, so each region package has its own section.
 

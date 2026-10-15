@@ -1,6 +1,6 @@
 # finland-outdoor-tak-data
 
-Ready-to-use TAK data for Finnish national parks and regions: shelters, campfire sites, towers, toilets and hiking routes as CoT data packages, KMZ overlays with auto-refreshing KML network links, GPX routes and GeoPDF maps for **ATAK, WinTAK and iTAK**.
+Ready-to-use TAK data for Finnish national parks and regions: shelters, campfire sites, towers, toilets and hiking routes as CoT data packages, KMZ overlays with auto-refreshing KML network links and GPX routes for **ATAK** (WinTAK and iTAK not tested yet). GeoPDF national park maps are coming once publication permission has been granted.
 
 > **Status:** pilot. The data is published and updated weekly; the share pages show when it was last checked. Tested with ATAK 5.8 and TAK Aware; iTAK and WinTAK are not tested yet.
 
@@ -13,7 +13,7 @@ Ready-to-use TAK data for Finnish national parks and regions: shelters, campfire
 | One area (41 national parks, 19 regions) | KMZ, TAK data package, GPX | `<lang>/<category>/<area>/` |
 | Icon set for the markers | ATAK iconset | `iconset/lipas2tak_iconset.zip` |
 | QR codes and "open in ATAK" buttons for every area | web pages (en / fi) | [share/en](https://street3r.github.io/finland-outdoor-tak-data/share/en/), [share/fi](https://street3r.github.io/finland-outdoor-tak-data/share/fi/) |
-| National park maps | GeoPDF, overlay KMZ | [Releases](../../releases), [maps/](maps/) |
+| National park maps *(coming: awaiting publication permission)* | GeoPDF, overlay KMZ | [Releases](../../releases), [maps/](maps/) |
 
 Base URL: **https://street3r.github.io/finland-outdoor-tak-data/** (lists every file).
 Finnish and English versions are separate files (`fi` / `en`).
@@ -32,7 +32,7 @@ For navigable routes and #hashtag filtering, use the per-area **data packages** 
 |---|---|---|
 | `main` | this page, docs, map catalogue, overlays, QR codes for the start links | hand |
 | [`data`](../../tree/data) | generated layers, packages and share pages, served via GitHub Pages | weekly bot; holds only the latest version |
-| [Releases](../../releases) | GeoPDF maps (large files) | hand, one release per map edition |
+| [Releases](../../releases) | GeoPDF maps (large files; coming, awaiting publication permission) | hand, one release per map edition |
 
 The data is generated from [Lipas](https://lipas.fi) and [OpenStreetMap](https://www.openstreetmap.org) by [python-lipas2tak-tool](https://github.com/Street3r/python-lipas2tak-tool) and published by [docker-lipas-integration](https://github.com/Street3r/docker-lipas-integration).
 
