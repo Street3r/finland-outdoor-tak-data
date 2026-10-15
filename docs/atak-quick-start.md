@@ -28,7 +28,7 @@ By hand (or in other apps):
 1. Import → **KML Link**.
 2. Name: e.g. `Finland outdoors`. URL: `…/links/all_en.kml` (or `all_fi.kml`, `kansallispuistot_en.kml`, `maakunnat_en.kml`).
 3. Auto refresh on, interval `86400` (the data changes weekly).
-4. Overlay Manager → **Network Resources**: download, then switch areas on and off. National parks are on by default, regions off (they contain the parks too, so switching both on shows park features twice). Each region must be switched on separately.
+4. Overlay Manager → **Network Resources**: download, then switch areas on and off. Switch on the whole link to show every area, or open it and pick single areas (e.g. Nuuksio National Park). ATAK only downloads the areas that are switched on. National parks are on by default, regions off. Regions contain the parks too, so switching on both a park and its region shows the park features twice, in exactly the same places; this is harmless. Each region must be switched on separately.
 
 A single area works the same way with its `.kmz` URL, e.g. `…/en/kansallispuistot/nuuksio/nuuksio_en.kmz`.
 
@@ -38,6 +38,7 @@ Import `…/<lang>/<category>/<area>/<area>_<lang>.zip` via Import Manager, a QR
 
 - The package stays in **Data Packages**, so its contents can be hidden or removed together.
 - A new version has a new package UID, so ATAK imports it and updates the existing markers and routes (no duplicates). Importing the same version again is skipped. Finnish and English packages of an area share the same items: importing the other language switches the texts.
+- The old version stays in **Data Packages** after a new one is imported. Delete it if you no longer need it; the date in the package name tells the versions apart.
 - Sites removed from the data stay on the device until you delete the old package: in Data Packages, delete the old version together with its contents, then import the new one.
 
 Filter with hashtags in the search: `#laavu`, `#nuotiopaikka`, `#nuuksio`, `#uusimaa` …
@@ -54,4 +55,4 @@ Open the `.kml` file (network link) or the `.kmz`.
 
 - Many Metsähallitus sites and main trails are missing from Lipas; OpenStreetMap fills some gaps.
 - Refreshing layers come from the `_link.zip` packages; importing a `.kml`/`.kmz` file directly creates a one-off copy.
-- To be confirmed: whether ATAK fetches areas that are switched off.
+- Tested with ATAK 5.8 and TAK Aware. iTAK and WinTAK have not been tested yet.

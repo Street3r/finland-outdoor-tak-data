@@ -2,7 +2,7 @@
 
 Ready-to-use TAK data for Finnish national parks and regions: shelters, campfire sites, towers, toilets and hiking routes as CoT data packages, KMZ overlays with auto-refreshing KML network links, GPX routes and GeoPDF maps for **ATAK, WinTAK and iTAK**.
 
-> **Status:** early pilot. Download URLs go live once the first weekly update has been published.
+> **Status:** pilot. The data is published and updated weekly; the share pages show when it was last checked. Tested with ATAK 5.8 and TAK Aware; iTAK and WinTAK are not tested yet.
 
 ## What's available
 
