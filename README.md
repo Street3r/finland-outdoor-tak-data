@@ -26,6 +26,13 @@ Finnish and English versions are separate files (`fi` / `en`).
 
 For navigable routes and #hashtag filtering, use the per-area **data packages** instead of KML. Details: [docs/atak-quick-start.md](docs/atak-quick-start.md) · QR codes for every area: [share page](https://street3r.github.io/finland-outdoor-tak-data/share/en/) ([suomeksi](https://street3r.github.io/finland-outdoor-tak-data/share/fi/)).
 
+## Planned
+
+- **Wilderness areas** (erämaa-alueet) and **state hiking areas** (valtion retkeilyalueet) as their own areas, like the national parks.
+- GeoPDF national park maps, once publication permission has been granted.
+
+Suggestions are welcome as issues.
+
 ## How this repository works
 
 | Branch / place | Content | Updated by |
