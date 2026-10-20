@@ -10,7 +10,7 @@ Scan a QR code with the phone camera and open it with ATAK; ATAK asks before imp
 
 | QR | |
 |---|---|
-| <img src="share/qr/share_en.svg" width="150" alt="QR: Share page with all QR codes"> | **Share page with all QR codes**<br>Opens in a browser<br>National parks and regions, one QR code per area.<br>[https://street3r.github.io/finland-outdoor-tak-data/share/en/index.html](https://street3r.github.io/finland-outdoor-tak-data/share/en/index.html) |
+| <img src="share/qr/share_en.svg" width="150" alt="QR: Share page with all QR codes"> | **Share page with all QR codes**<br>Opens in a browser<br>National parks, wilderness areas, state hiking areas and regions, one QR code per area.<br>[https://street3r.github.io/finland-outdoor-tak-data/share/en/index.html](https://street3r.github.io/finland-outdoor-tak-data/share/en/index.html) |
 | <img src="share/qr/iconset.svg" width="150" alt="QR: Icon set (install once)"> | **Icon set (install once)**<br>Scan with the phone camera, open with ATAK<br>[https://street3r.github.io/finland-outdoor-tak-data/iconset/lipas2tak_iconset.zip](https://street3r.github.io/finland-outdoor-tak-data/iconset/lipas2tak_iconset.zip)<br><sub><code>tak://com.atakmap.app/import?url=https%3A%2F%2Fstreet3r.github.io%2Ffinland-outdoor-tak-data%2Ficonset%2Flipas2tak_iconset.zip</code></sub> |
 
 ## All areas

@@ -10,7 +10,7 @@ Skannaa QR-koodi puhelimen kameralla ja avaa ATAKilla; ATAK kysyy ennen tuontia.
 
 | QR | |
 |---|---|
-| <img src="share/qr/share_fi.svg" width="150" alt="QR: Jakosivu, kaikki QR-koodit"> | **Jakosivu, kaikki QR-koodit**<br>Avautuu selaimessa<br>Kansallispuistot ja maakunnat, QR-koodi jokaiselle alueelle.<br>[https://street3r.github.io/finland-outdoor-tak-data/share/fi/index.html](https://street3r.github.io/finland-outdoor-tak-data/share/fi/index.html) |
+| <img src="share/qr/share_fi.svg" width="150" alt="QR: Jakosivu, kaikki QR-koodit"> | **Jakosivu, kaikki QR-koodit**<br>Avautuu selaimessa<br>Kansallispuistot, erämaa-alueet, valtion retkeilyalueet ja maakunnat, QR-koodi jokaiselle alueelle.<br>[https://street3r.github.io/finland-outdoor-tak-data/share/fi/index.html](https://street3r.github.io/finland-outdoor-tak-data/share/fi/index.html) |
 | <img src="share/qr/iconset.svg" width="150" alt="QR: Kuvakesarja (asennetaan kerran)"> | **Kuvakesarja (asennetaan kerran)**<br>Skannaa puhelimen kameralla, avaa ATAKilla<br>[https://street3r.github.io/finland-outdoor-tak-data/iconset/lipas2tak_iconset.zip](https://street3r.github.io/finland-outdoor-tak-data/iconset/lipas2tak_iconset.zip)<br><sub><code>tak://com.atakmap.app/import?url=https%3A%2F%2Fstreet3r.github.io%2Ffinland-outdoor-tak-data%2Ficonset%2Flipas2tak_iconset.zip</code></sub> |
 
 ## Kaikki alueet
