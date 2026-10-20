@@ -26,9 +26,9 @@ Easiest: open the **auto-refreshing layer** QR code or button on the share page 
 By hand (or in other apps):
 
 1. Import → **KML Link**.
-2. Name: e.g. `Finland outdoors`. URL: `…/links/all_en.kml` (or `all_fi.kml`, `kansallispuistot_en.kml`, `maakunnat_en.kml`).
+2. Name: e.g. `Finland outdoors`. URL: `…/links/all_en.kml` (or `all_fi.kml`, `kansallispuistot_en.kml`, `eramaat_en.kml`, `valtion_retkeilyalueet_en.kml`, `maakunnat_en.kml`).
 3. Auto refresh on, interval `86400` (the data changes weekly).
-4. Overlay Manager → **Network Resources**: download, then switch areas on and off. Switch on the whole link to show every area, or open it and pick single areas (e.g. Nuuksio National Park). ATAK only downloads the areas that are switched on. National parks are on by default, regions off. Regions contain the parks too, so switching on both a park and its region shows the park features twice, in exactly the same places; this is harmless. Each region must be switched on separately.
+4. Overlay Manager → **Network Resources**: download, then switch areas on and off. Switch on the whole link to show every area, or open it and pick single areas (e.g. Nuuksio National Park). ATAK only downloads the areas that are switched on. National parks, wilderness areas and state hiking areas are on by default, regions off. Regions contain the same features too, so switching on both an area and its region shows those features twice, in exactly the same places; this is harmless. Each region must be switched on separately.
 
 A single area works the same way with its `.kmz` URL, e.g. `…/en/kansallispuistot/nuuksio/nuuksio_en.kmz`.
 

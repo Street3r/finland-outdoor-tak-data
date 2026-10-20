@@ -1,6 +1,6 @@
 # finland-outdoor-tak-data
 
-Ready-to-use TAK data for Finnish national parks and regions: shelters, campfire sites, towers, toilets and hiking routes as CoT data packages, KMZ overlays with auto-refreshing KML network links and GPX routes for **ATAK** (WinTAK and iTAK not tested yet). GeoPDF national park maps are coming once publication permission has been granted.
+Ready-to-use TAK data for Finnish national parks, wilderness areas, state hiking areas and regions: shelters, campfire sites, towers, toilets and hiking routes as CoT data packages, KMZ overlays with auto-refreshing KML network links and GPX routes for **ATAK** (WinTAK and iTAK not tested yet). GeoPDF national park maps are coming once publication permission has been granted.
 
 > **Status:** pilot. The data is published and updated weekly; the share pages show when it was last checked. Tested with ATAK 5.8 and TAK Aware; iTAK and WinTAK are not tested yet.
 
@@ -9,8 +9,8 @@ Ready-to-use TAK data for Finnish national parks and regions: shelters, campfire
 | Content | Format | Where |
 |---|---|---|
 | All areas as auto-refreshing layers | KML network link | `links/all_en.kml`, `links/all_fi.kml` |
-| National parks / regions only | KML network link | `links/kansallispuistot_*.kml`, `links/maakunnat_*.kml` |
-| One area (41 national parks, 19 regions) | KMZ, TAK data package, GPX | `<lang>/<category>/<area>/` |
+| One category only | KML network link | `links/kansallispuistot_*.kml`, `links/eramaat_*.kml`, `links/valtion_retkeilyalueet_*.kml`, `links/maakunnat_*.kml` |
+| One area (41 national parks, 12 wilderness areas, 5 state hiking areas, 19 regions) | KMZ, TAK data package, GPX | `<lang>/<category>/<area>/` |
 | Icon set for the markers | ATAK iconset | `iconset/lipas2tak_iconset.zip` |
 | QR codes and "open in ATAK" buttons for every area | web pages (en / fi) | [share/en](https://street3r.github.io/finland-outdoor-tak-data/share/en/), [share/fi](https://street3r.github.io/finland-outdoor-tak-data/share/fi/) |
 | National park maps *(coming: awaiting publication permission)* | GeoPDF, overlay KMZ | [Releases](../../releases), [maps/](maps/) |
@@ -28,7 +28,6 @@ For navigable routes and #hashtag filtering, use the per-area **data packages** 
 
 ## Planned
 
-- **Wilderness areas** (erämaa-alueet) and **state hiking areas** (valtion retkeilyalueet) as their own areas, like the national parks.
 - GeoPDF national park maps, once publication permission has been granted.
 
 Suggestions are welcome as issues.

@@ -20,14 +20,14 @@ links:
     title: Share page with all QR codes
     path: share/en/index.html
     kind: url
-    note: National parks and regions, one QR code per area.
+    note: National parks, wilderness areas, state hiking areas and regions, one QR code per area.
   - id: share_fi
     lang: fi
     group: Aloita tästä
     title: Jakosivu, kaikki QR-koodit
     path: share/fi/index.html
     kind: url
-    note: Kansallispuistot ja maakunnat, QR-koodi jokaiselle alueelle.
+    note: Kansallispuistot, erämaa-alueet, valtion retkeilyalueet ja maakunnat, QR-koodi jokaiselle alueelle.
 
   - id: iconset
     lang: en
