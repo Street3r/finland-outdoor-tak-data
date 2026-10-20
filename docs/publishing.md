@@ -12,7 +12,7 @@ Write access: a deploy key with write access. The publisher only pushes to the `
 
 ## Monitoring
 
-The *Stale data check* workflow runs daily. If `status.json` on the `data` branch is more than 10 days old, it opens an issue (GitHub e-mails the owner) with the commands to check on the server, and closes it when updates resume. It also opens an issue when the publisher blocked an update because the new build had far fewer features than the published data (`publish_blocked` in `status.json`); the published data stays as it was until a normal update or `--allow-shrink`. Dependabot keeps the workflow actions up to date.
+The *Stale data check* workflow runs daily. If `status.json` on the `data` branch is more than 10 days old, it opens an issue (GitHub e-mails the owner) with the commands to check on the server, and closes it when updates resume. It also opens an issue when the publisher blocked an update because the new build had far fewer features than the published data (`publish_blocked` in `status.json`); the published data stays as it was until a normal update or `--allow-shrink`. A third issue, *Data quality warnings*, lists the build's quality findings (`warnings` in `status.json`: areas without features, area names missing from `area_names.yaml`, very large files); it is updated daily and closed when the findings are gone. Dependabot keeps the workflow actions up to date.
 
 ## GitHub Pages
 
