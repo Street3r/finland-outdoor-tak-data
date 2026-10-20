@@ -31,6 +31,8 @@ jobs:
         run: |
           if [ ! -f status.json ]; then echo "days=999" >> "$GITHUB_OUTPUT"; echo "checked=never" >> "$GITHUB_OUTPUT"; exit 0; fi
           checked=$(python3 -c "import json;print(json.load(open('status.json'))['checked'])")
+          blocked=$(python3 -c "import json;b=json.load(open('status.json')).get('publish_blocked');print(f\"{b['at']}: {b['features']} features, {b['published_features']} published\" if b else '')")
+          echo "blocked=$blocked" >> "$GITHUB_OUTPUT"
           days=$(python3 -c "import datetime as d;c=d.datetime.fromisoformat('$checked');print((d.datetime.now(d.timezone.utc)-c).days)")
           echo "checked=$checked" >> "$GITHUB_OUTPUT"
           echo "days=$days" >> "$GITHUB_OUTPUT"
@@ -52,4 +54,22 @@ jobs:
             fi
           elif [ -n "$open" ]; then
             gh issue close "$open" --repo "$GITHUB_REPOSITORY" --comment "Data checked $CHECKED again; closing."
+          fi
+      - name: Open or close the blocked-update issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BLOCKED: ${{ steps.age.outputs.blocked }}
+          BTITLE: "Data update blocked: far fewer features"
+        run: |
+          open=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --search "\"$BTITLE\" in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$BLOCKED" ]; then
+            if [ -z "$open" ]; then
+              gh issue create --repo "$GITHUB_REPOSITORY" --title "$BTITLE" --body "The publisher did not publish the latest build because it has far fewer features than the published data ($BLOCKED). The published data was kept.
+
+          This usually means a source (often OpenStreetMap Overpass) returned incomplete data. Check \`docker compose logs --tail 100 generator\` on the server. If the drop is expected, publish anyway: \`docker compose run --rm publisher publish --raw /data/raw --workdir /data/publish --allow-shrink\`.
+
+          This issue closes automatically after the next successful update."
+            fi
+          elif [ -n "$open" ]; then
+            gh issue close "$open" --repo "$GITHUB_REPOSITORY" --comment "Data published again; closing."
           fi
