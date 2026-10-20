@@ -33,6 +33,7 @@ jobs:
           checked=$(python3 -c "import json;print(json.load(open('status.json'))['checked'])")
           blocked=$(python3 -c "import json;b=json.load(open('status.json')).get('publish_blocked');print(f\"{b['at']}: {b['features']} features, {b['published_features']} published\" if b else '')")
           echo "blocked=$blocked" >> "$GITHUB_OUTPUT"
+          python3 -c "import json,sys;sys.stdout.write(''.join('- '+w+'\\n' for w in json.load(open('status.json')).get('warnings') or []))" > warnings.md
           days=$(python3 -c "import datetime as d;c=d.datetime.fromisoformat('$checked');print((d.datetime.now(d.timezone.utc)-c).days)")
           echo "checked=$checked" >> "$GITHUB_OUTPUT"
           echo "days=$days" >> "$GITHUB_OUTPUT"
@@ -72,4 +73,22 @@ jobs:
             fi
           elif [ -n "$open" ]; then
             gh issue close "$open" --repo "$GITHUB_REPOSITORY" --comment "Data published again; closing."
+          fi
+      - name: Open, update or close the quality warnings issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          WTITLE: "Data quality warnings"
+        run: |
+          open=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --search "\"$WTITLE\" in:title" --json number --jq '.[0].number // empty')
+          if [ -s warnings.md ]; then
+            { echo "The latest build reported these quality warnings (status.json):"; echo; cat warnings.md; echo
+              echo "Areas without features got no package; a missing base name means the area's file name, hashtag and English name were guessed (add it to config/area_names.yaml in python-lipas2tak-tool)."
+              echo; echo "This issue is updated daily and closes automatically when the warnings are gone."; } > body.md
+            if [ -z "$open" ]; then
+              gh issue create --repo "$GITHUB_REPOSITORY" --title "$WTITLE" --body-file body.md
+            else
+              gh issue edit "$open" --repo "$GITHUB_REPOSITORY" --body-file body.md
+            fi
+          elif [ -n "$open" ]; then
+            gh issue close "$open" --repo "$GITHUB_REPOSITORY" --comment "No quality warnings in the latest build; closing."
           fi
