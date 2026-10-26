@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2"><NetworkLink><name>Paistunturin erämaa-alue</name><refreshVisibility>0</refreshVisibility><Link><href>https://street3r.github.io/finland-outdoor-tak-data/fi/eramaat/paistunturi/paistunturi_fi.kmz</href><refreshMode>onInterval</refreshMode><refreshInterval>86400</refreshInterval></Link></NetworkLink></kml>
